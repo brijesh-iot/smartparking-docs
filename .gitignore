@@ -1,0 +1,13 @@
+.git
+.idea
+__init__.py
+cert.pem
+private.key
+root.ca.pem
+*.bak
+.git.opencloud
+Cloud-Guild-Presentation.pdf
+Cloud-Guild-Presentation.pptx
+Cloud Capstone Presentation Template.pptx
+sample.pptx
+.git.old

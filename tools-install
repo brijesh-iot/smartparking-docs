@@ -1,0 +1,37 @@
+----AWS Infrastructure Setup using Jenkins installed in EKS Cluster---
+
+This will create EKS Cluster with one node and will install Jenkins, Terraform, Java, Maven, AWS CLI with required Jenkins plugin required for build and deploy.
+EKS uses EFS file system as storage so even if Jenkins will be shutdown it will persist all the configurations.
+Jenkins Master node will be passive and builds will be performed by Jenkins Slaves inside EKS Pods.
+
+Go to terraform-aws-tools folder,
+-- change the provide.tf file with respective aws secrets
+-- terraform init
+-- terraform fmt
+-- terraform validate
+-- terraform plan --auto-approve
+-- terraform apply --auto-approve
+
+
+---AWS SmartParking IoT Infrastructure Setup---
+
+AWS resources will be created through Terraform & CloudFormation scripts which will run in Jenkins agents.
+
+
+
+
+
+--Install Java--
+sudo yum install java -y
+
+--Install unzip--
+sudo yum install unzip -y
+
+--Install Terraform--
+sudo curl "https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip" -o "terraform.zip"
+sudo unzip terraform.zip
+sudo mv terraform /usr/local/bin/terraform
+sudo terraform version
+
+--Install awscli--
+
